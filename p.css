@@ -1,0 +1,48 @@
+h1 {
+  font-size: 300%;
+}
+
+html {
+  min-height: 100%;
+  overflow: hidden;
+}
+.list a:hover {
+  color: #f0860c;
+}
+body {
+  background: #6792ca;
+  color: #ecf4ff;
+  margin: 0 auto;
+
+  background: url("code.jpg") no-repeat right center;
+  background-position: right 100px center;
+  background-attachment: fixed;
+}
+.pp {
+  text-align: center;
+}
+.header img {
+  float: right;
+  width: 50px;
+  height: 50px;
+  background: #555;
+}
+.header2 img {
+  float: right;
+  width: 70px;
+  height: 45px;
+  background: #555;
+}
+.header3 img {
+  float: right;
+  width: 60px;
+  height: 60px;
+  background: #555;
+  vertical-align: bottom;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}

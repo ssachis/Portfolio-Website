@@ -1,0 +1,21 @@
+input {
+  max-width: 650px;
+  border-style: none;
+  border-width: 1px;
+  border-radius: 10px;
+
+  background: #90baee;
+  padding: 8px 12px;
+}
+.i input {
+  height: 90px;
+}
+body {
+  background: #6792ca;
+  color: #ecf4ff;
+  margin: 0 auto;
+  width: 50%;
+  background: url("code.jpg") no-repeat right center;
+  background-position: right 100px center;
+  background-attachment: fixed;
+}
