@@ -1,4 +1,4 @@
 # Portfolio-Website
-Sample Portfolio Website \\^o^/<br />
-the backend hasnt been configuired<br />
+Sample Portfolio Website ☆*: .｡. o(≧▽≦)o .｡.:*☆ <br />
+not connected to php yet <br />
 javascript of the website has been inspired/copied from https://nad.is/<br />
