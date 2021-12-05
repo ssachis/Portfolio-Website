@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="contact.css"rel="stylesheet">
+
+</head>
+<body>
+    <header>
+       <b> CONTACT ME</b>
+    </header>
+    <form>
+        <div>
+            <input type="text" name="name" class="s1" value="" placeholder="Name" maxlength="100" aria-label="Name">
+        </div>
+        <div>
+            <input type="email" name="email" class="s2" value="" placeholder="Email" required="" pattern="^.+@.+\.[a-zA-Z]{2,63}$" maxlength="250" aria-label="Email">
+        </div>
+        <div><textarea 
+        placeholder="Type your message here..."  class="s3" ></textarea></div>
+    <div>
+        <button data-testid="buttonElement" ><span >Submit</span></button>
+    </div></form>
+
+</body>
+</html>
