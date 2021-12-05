@@ -1,4 +1,4 @@
 # Portfolio-Website
-Sample Portfolio Website:)
-the backend hasnt been configuired
-js of the website was inspired and taken from https://nad.is/
+Sample Portfolio Website:)<br />
+the backend hasnt been configuired<br />
+javascript of the website has been inspired/copied from https://nad.is/<br />
