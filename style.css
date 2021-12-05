@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: url("code.jpg") no-repeat right center;
+  background-position: right 100px center;
+  border-right: 10px solid transparent;
+}
+header {
+  position: absolute;
+  top: 50;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+.list a:hover {
+  color: #f0860c;
+}

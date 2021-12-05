@@ -1,0 +1,124 @@
+/*------------------*\ $GLOBALS \*------------------*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.list a:hover {
+  color: #f0860c;
+}
+
+body {
+  background: #6792ca;
+  color: #ecf4ff;
+  margin: 0 auto;
+  width: 50%;
+  background: url("code.jpg") no-repeat right center;
+  background-position: right 100px center;
+  background-attachment: fixed;
+}
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+a {
+  color: #ecf4ff;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+.button {
+  text-decoration: none;
+  background: #5d96dd;
+  font-weight: 700;
+  padding: 0.8em;
+}
+.project-list_item {
+  margin-bottom: 1em;
+}
+/*------------------*\ $STYLE 1 \*------------------*/
+#project-list-1 {
+  list-style: none;
+  padding: 10;
+}
+#project-list-1 .project-list_item {
+  position: relative;
+  transition: all 0.8s ease;
+  z-index: 2;
+}
+#project-list-1 .project-list_item:hover,
+#project-list-1 .project-list_item:focus {
+  background: #ecf4ff;
+  color: #3b6ca9;
+  padding: 1em 1em 6em 1em;
+}
+#project-list-1 .project-list_title {
+  margin-top: 50;
+  margin-bottom: 10;
+}
+#project-list-1 .project-list_img {
+  display: block;
+  position: relative;
+  margin-bottom: 10;
+
+  z-index: -2;
+}
+#project-list-1 .project-list_case {
+  position: absolute;
+
+  right: 0;
+  top: 4em;
+  left: 35em;
+  margin: 0 auto;
+  text-align: center;
+  width: 20%;
+  height: 3em;
+  z-index: -3;
+}
+
+.text {
+  color: black;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.t {
+  margin: 0.4em 0.125em 0.333em 0;
+
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 7px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 22px;
+  color: #094d9e;
+  background-color: #d5eef9;
+}
+.lt a:hover,
+a:focus {
+  text-decoration: none;
+  color: #ecf4ff;
+  background: #5d96dd;
+}
