@@ -47,7 +47,11 @@ body {
   left: 10px;
 }
 
-
+.in {
+   margin-top: 0;
+    padding: 60px 45% 40px 10px;
+    background-image: none;
+}
 @media screen and (max-width: 767px)
 
 .in {
@@ -61,8 +65,4 @@ body {
    padding-right: 25%;
     padding-left: 50px;
 }
-.in {
-   margin-top: 0;
-    padding: 70px 45% 70px 100px;
-    background-image: none;
-}
+
