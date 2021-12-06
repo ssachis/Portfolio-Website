@@ -46,3 +46,8 @@ body {
   top: 18px;
   left: 10px;
 }
+.inline-parent.inline-hero {
+    margin-top: 0;
+    padding: 70px 45% 70px 100px;
+    background-image: none;
+}
