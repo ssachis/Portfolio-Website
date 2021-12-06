@@ -47,22 +47,30 @@ body {
   left: 10px;
 }
 
-.in {
-   margin-top: 0;
-    padding: 60px 45% 40px 10px;
-    background-image: none;
+@media screen and (max-width: 479px)
+
+.in{
+    padding-top: 100px;
+   padding-bottom: 60px;
 }
 @media screen and (max-width: 767px)
 
 .in {
-   margin-top: 0;
+    margin-top: 0;
     padding: 10px 20px 60px;
 }
 @media screen and (max-width: 991px)
 
 .in{
-   margin-top: 0;
-   padding-right: 25%;
+    margin-top: 0;
+    padding-right: 25%;
     padding-left: 50px;
 }
+.in {
+    margin-top: 0;
+    padding: 60px 45% 70px 40px;
+    background-image: none;
+}
+
+
 
