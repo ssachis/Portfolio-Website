@@ -1248,7 +1248,7 @@ a{
     -webkit-box-direction:normal
 }
 .nav-link.w--current{
-    color:#f0860c
+    color:#228185
 }
 .close-button.w--open{
     position:fixed;
@@ -1478,7 +1478,7 @@ a{
     -webkit-flex:0 auto;
     -ms-flex:0 auto;
     flex:0 auto;
-    color:#f0860c;
+    color:#228185;
     font-weight:500
 }
 .nav-link-desktop.nav-link-contact{
