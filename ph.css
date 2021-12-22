@@ -1,0 +1,65 @@
+body {
+  width: 100%;
+  margin: auto;
+}
+
+.header {
+  font-size: 6vw;
+  font-family: "Quicksand";
+  text-align: center;
+  align-content: center;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.gallery {
+  display: flex;
+}
+
+.column {
+  display: block;
+  margin-right: 0.5vw;
+  width: 100%;
+}
+
+.item {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.5vw;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  border-radius: 1%;
+}
+
+.imginfo {
+  opacity: 0;
+  bottom: -0.78vw;
+  left: 0.6vw;
+
+  padding: 0.35vw;
+  color: black;
+  position: absolute;
+  font-size: 0.65vw;
+  font-family: "Quicksand";
+  transition: 0.2s;
+  background-color: white;
+}
+
+.imglink:hover + .imginfo,
+.imginfo:hover {
+  opacity: 1;
+  bottom: 0.78vw;
+}
+
+.imgdesc {
+  font-size: 0.58vw;
+  color: dimgray;
+  display: block;
+}
+
+.img {
+  display: block;
+  position: relative;
+  transition: 0.2s;
+  max-width: 100%;
+  max-height: 100%;
+}
