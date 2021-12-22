@@ -19,14 +19,14 @@ header {
   z-index: 1000;
 }
 .list a:hover {
-  color: #228185;
+  color: #f0860c;
 }
 
 body {
   background: #6792ca;
   color: #ecf4ff;
   margin: 0 auto;
-  width: 60%;
+  width: 50%;
   background: url("code.jpg") no-repeat right center;
   background-position: right 100px center;
   background-attachment: fixed;
@@ -82,7 +82,7 @@ a {
 
   right: 0;
   top: 4em;
-  left: 20em;
+  left: 35em;
   margin: 0 auto;
   text-align: center;
   width: 20%;
@@ -122,3 +122,4 @@ a:focus {
   color: #ecf4ff;
   background: #5d96dd;
 }
+
