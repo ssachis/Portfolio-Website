@@ -873,7 +873,7 @@ a{
     margin-bottom:20px;
     text-decoration:none
 }
-.navbar-mobile{
+.f-mobile{
     position:static;
     display:block;
     -webkit-box-orient:vertical;
@@ -1271,7 +1271,6 @@ a{
 }
 
 .navbar-desktop{
-    position:fixed;
     display:block;
     width:100%;
     clear:none;
