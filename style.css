@@ -8,7 +8,6 @@ body {
   min-height: 100vh;
   background: url("code.jpg") no-repeat right center;
   background-position: right 100px center;
-  border-right: 10px solid transparent;
 }
 header {
   position: absolute;
