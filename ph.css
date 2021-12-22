@@ -9,7 +9,12 @@ body {
   text-align: center;
   align-content: center;
   margin-top: 5vw;
-  margin-bottom: 5vw;
+}
+.h {
+  text-align: center;
+  align-content: center;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
 }
 
 .gallery {
