@@ -43,18 +43,12 @@ body {
   transition: 0.2s;
   background-color: white;
 }
-
-.imglink:hover + .imginfo,
-.imginfo:hover {
-  opacity: 1;
-  bottom: 0.78vw;
+.list a:hover {
+  color: #228185;
 }
 
-.imgdesc {
-  font-size: 0.58vw;
-  color: dimgray;
-  display: block;
-}
+
+
 
 .img {
   display: block;
