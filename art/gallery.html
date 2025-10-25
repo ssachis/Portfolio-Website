@@ -27,7 +27,7 @@
     
     body { 
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      background: var(--darker); 
+      background: white; 
       color: #fff; 
       line-height: 1.6;
     }
@@ -61,9 +61,9 @@
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size:0rem;
       font-weight: 700;
-      color: var(--primary);
+      color:rgba(10, 10, 10, 0.9);
       text-decoration: none;
     }
 
@@ -97,14 +97,14 @@
 
     /* Hero Section */
     .hero {
-      height: 40vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, var(--darker) 0%, #1a0b2e 100%);
+      background: white;
       padding-top: 80px;
+      padding-bottom: 40px;
     }
 
     h1 { 
@@ -129,7 +129,8 @@
       color: #ff4081; 
       font-size: 2rem; 
       transition: all 0.3s;
-      display: inline-flex;
+      justify-content: center;
+      display: flex;
       align-items: center;
       gap: 10px;
       text-decoration: none;
@@ -151,7 +152,7 @@
 
     /* Gallery Section */
     .gallery-section {
-      padding: 60px 20px;
+      padding: 20px 20px;
     }
 
     .gallery {
@@ -181,13 +182,13 @@
     
     .art-image { 
       width: 100%; 
-      height: 250px; 
+      height: 325px; 
       background-size: cover; 
       background-position: center; 
     }
     
     .art-info { 
-  
+      display: none;
     }
     
     .art-title { 
@@ -208,7 +209,6 @@
       display:none;
       font-size: 0.8rem; 
       color: #999; 
-
       justify-content: space-between; 
     }
 
@@ -228,39 +228,14 @@
     }
     
     .modal-content {
-      max-width: 85%; 
-      max-height: 75%; 
-      border-radius: 16px;
+      max-width: 90vw; 
+      max-height: 90vh; 
+      object-fit: contain;
+      border-radius: 8px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.5);
       animation: fadeIn 0.5s ease;
     }
     
-    .modal-info { 
-      text-align: center; 
-      margin-top: 20px; 
-      padding: 0 20px;
-    }
-    
-    .modal-title { 
-      font-size: 1.8rem; 
-      margin-bottom: 10px; 
-      color: var(--primary);
-    }
-    
-    .modal-description { 
-      font-size: 1.1rem; 
-      color: #bbb; 
-      margin-bottom: 15px; 
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .modal-meta { 
-      font-size: 1rem; 
-      color: #999; 
-    }
-
     .close, .arrow {
       position: absolute; 
       top: 50%; 
@@ -278,6 +253,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 2001;
     }
     
     .close { 
@@ -315,6 +291,7 @@
 
     .back-to-portfolio {
       display: inline-flex;
+      justify-content: center;
       align-items: center;
       gap: 10px;
       color: var(--primary);
@@ -367,7 +344,7 @@
       }
       
       .hero {
-        height: 35vh;
+        height: auto;
         padding-top: 60px;
       }
       
@@ -389,6 +366,11 @@
       
       .arrow.left { left: 20px; }
       .arrow.right { right: 20px; }
+      
+      .modal-content {
+        max-width: 95vw;
+        max-height: 85vh;
+      }
     }
 
     @media (max-width: 480px) {
@@ -403,6 +385,11 @@
       .hero-sub {
         font-size: 1rem;
       }
+      
+      .modal-content {
+        max-width: 98vw;
+        max-height: 80vh;
+      }
     }
   </style>
 </head>
@@ -410,7 +397,7 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-container">
-      <a href="https://ssachis.github.io/Portfolio-Website/" class="logo"></a>
+      <a href="https://ssachis.github.io/Portfolio-Website/" class="logo">Art Gallery</a>
       <button class="hamburger" id="hamburger" aria-label="Open navigation">
         <i class="fas fa-bars"></i>
       </button>
@@ -426,14 +413,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Art Gallery</h1>
-    <p class="hero-sub">A collection of my architectural sketches and drawings</p>
-    <div class="insta-link">
-      <a href="https://instagram.com/art_byii" target="_blank">
-        <i class="fab fa-instagram"></i>
-        <span>@art_byii</span>
-      </a>
-    </div>
+
   </section>
 
   <!-- Gallery Section -->
@@ -549,7 +529,17 @@
       </div>
     </div>
   </section>
-  
+  <hero>
+
+  <div class="insta-link">
+    <a href="https://instagram.com/art_byii" target="_blank">
+      <i class="fab fa-instagram"></i>
+      <span>@art_byii</span>
+    </a>
+  </div>
+
+
+</hero>
   <!-- Footer -->
   <footer class="footer">
     <p>© 2025 Sachi Singh. All artwork created with 💜</p>
@@ -564,14 +554,7 @@
     <span class="close" id="modal-close">&times;</span>
     <span class="arrow left" id="prev">&#10094;</span>
     <span class="arrow right" id="next">&#10095;</span>
-    <div class="modal-body">
-      <img class="modal-content" id="modal-image" src="">
-      <div class="modal-info">
-        <h2 class="modal-title" id="modal-title"></h2>
-        <p class="modal-description" id="modal-description"></p>
-        <p class="modal-meta"><span id="modal-type"></span> | <span id="modal-year"></span></p>
-      </div>
-    </div>
+    <img class="modal-content" id="modal-image" src="">
   </div>
   
   <script>
@@ -607,10 +590,6 @@
       const artworks = document.querySelectorAll(".artwork");
       const modal = document.getElementById("art-modal");
       const modalImg = document.getElementById("modal-image");
-      const modalTitle = document.getElementById("modal-title");
-      const modalDesc = document.getElementById("modal-description");
-      const modalType = document.getElementById("modal-type");
-      const modalYear = document.getElementById("modal-year");
       const close = document.getElementById("modal-close");
       const prev = document.getElementById("prev");
       const next = document.getElementById("next");
@@ -639,10 +618,6 @@
         const art = artworks[currentIndex];
         const imgUrl = art.querySelector(".art-image").style.backgroundImage.slice(5, -2);
         modalImg.src = imgUrl;
-        modalTitle.textContent = art.querySelector(".art-title").textContent;
-        modalDesc.textContent = art.querySelector(".art-description").textContent;
-        modalType.textContent = art.querySelector(".art-meta span:first-child").textContent;
-        modalYear.textContent = art.querySelector(".art-meta span:last-child").textContent;
       }
 
       close.addEventListener("click", closeModal);
@@ -671,5 +646,6 @@
       });
     });
   </script>
+  
 </body>
 </html>
