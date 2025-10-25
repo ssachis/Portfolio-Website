@@ -803,9 +803,9 @@
       <button class="hamburger" id="hamburger" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
       <ul class="nav-menu" id="nav-menu" role="menubar">
         <li role="none"><a role="menuitem" href="#home" class="nav-link active">Home</a></li>
+        <li role="none"><a role="menuitem" href="#projects" class="nav-link">Projects</a></li>
         <li role="none"><a role="menuitem" href="#about" class="nav-link">About</a></li>
         <li role="none"><a role="menuitem" href="#experience" class="nav-link">Experience</a></li>
-        <li role="none"><a role="menuitem" href="#projects" class="nav-link">Projects</a></li>
         <li role="none"><a role="menuitem" href="art/gallery.html" class="nav-link" target="_blank">Art</a></li>
         <li role="none"><a role="menuitem" href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -824,18 +824,90 @@
       <p class="hero-sub">Hi, I'm</p>
       <h1 class="hero-title"><span class="highlight">Sachi Singh</span></h1>
       <div class="typewriter">
-        <h2 class="hero-subtitle">Programmer · Coder · Artist</h2>
+        <h2 class="hero-subtitle">Software Engineer · Innovator</h2>
       </div>
       <p class="hero-desc muted">I build clean, usable interfaces and thoughtful systems — mixing code with craft to create experiences people enjoy.</p>
 
       <div class="hero-actions">
-        <a href="#experience" class="btn btn-primary glow">View Experience</a>
-        <a href="#projects" class="btn btn-outline">Explore Projects</a>
+        <a href="#projects" class="btn btn-primary glow">View Projects</a>
+        <a href="#experience" class="btn btn-outline">Explore Experience</a>
       </div>
     </div>
 
     <div class="scroll-arrow" aria-hidden="true">
       <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Featured Projects (Always Visible) -->
+        <div class="project-card glass">
+          <img src="photos/335685663-f01d84a8-a32f-489f-945b-c4307ad84577.png" alt="One-shot Similarity Learning" />
+          <div class="project-body">
+            <h3>One-shot Similarity Learning</h3>
+            <p class="small muted">Face recognition using Siamese Neural Network to identify unique faces with minimal data.</p>
+            <a href="https://github.com/ssachis/One-shot-Similarity-learning" class="btn btn-primary glow" target="_blank" rel="noopener">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card glass">
+          <img src="photos/Screenshot 2025-10-23 at 3.43.28 PM.png" alt="The Hangout Delhi" />
+          <div class="project-body">
+            <h3>The Hangout Delhi</h3>
+            <p class="small muted">Cofounded a platform connecting artists and venues — bringing events to life.</p>
+            <a href="https://thehangoutdelhi.fun" class="btn btn-primary glow" target="_blank" rel="noopener">Visit Website</a>
+          </div>
+        </div>
+
+        <div class="project-card glass">
+          <img src="photos/carma.jpeg" alt="Project Karma" />
+          <div class="project-body">
+            <h3>Project-Karma</h3>
+            <p class="small muted">Designing of an Efficient Model for Violence Detection Using Advanced Deep Learning Techniques</p>
+            <a href="https://ieeexplore.ieee.org/document/10141720?" class="btn btn-primary glow" target="_blank" rel="noopener">Research Paper</a>
+          </div>
+        </div>
+
+        <!-- Additional Projects (Hidden Initially) -->
+        <div class="project-card glass hidden">
+          <img src="photos/download (1).png" alt="Translator App" />
+          <div class="project-body">
+            <h3>Translator App</h3>
+            <p class="small muted">A mobile app that listens, translates and speaks — merging tech and accessibility.</p>
+            <a href="https://github.com/ssachis/translator" class="btn btn-primary glow" target="_blank" rel="noopener">View App</a>
+          </div>
+        </div>
+
+        <div class="project-card glass hidden">
+          <img src="photos/game.png" alt="Lets Play Game App" />
+          <div class="project-body">
+            <h3>Lets Play</h3>
+            <p class="small muted">A Flutter-based game app with login, registry and games (Flappy Bird, Dino Runs, Arkanoid).</p>
+            <a href="https://github.com/ssachis/lets-play" class="btn btn-primary glow" target="_blank" rel="noopener">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card glass hidden">
+          <img src="photos/music.png" alt="Music Player" />
+          <div class="project-body">
+            <h3>Music Player</h3>
+            <p class="small muted">A music player with splash screen, songs list, and player interface for seamless music experience.</p>
+            <a href="https://github.com/ssachis/music-player" class="btn btn-primary glow" target="_blank" rel="noopener">View Project</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- View More Projects Button -->
+      <div class="projects-expand-container">
+        <button class="expand-btn" id="projectsExpandBtn">
+          View More Projects
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -845,14 +917,19 @@
       <div class="about-text">
         <h2>About Me</h2>
         <p class="short muted">I'm a computer science graduate who loves creating systems that are both functional and beautiful.</p>
-        <p>A curious soul , I love learning and exploring new technologies.</p>
+        <p>A curious soul, I love learning and exploring new technologies. My passion lies at the intersection of technology and creativity, where I can build solutions that make a difference.</p>
         
         <div class="skills">
-          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Java</span>
           <span class="skill-tag">Python</span>
+          <span class="skill-tag">Spring Boot</span>
           <span class="skill-tag">React</span>
           <span class="skill-tag">AI/ML</span>
-          <span class="skill-tag">Design</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">REST API</span>
+          <span class="skill-tag">Oracle</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Git</span>
         </div>
 
         <!-- Simple art mention -->
@@ -899,6 +976,7 @@
               <span class="skill-tag">REST API</span>
               <span class="skill-tag">Oracle</span>
               <span class="skill-tag">SonarQube</span>
+              <span class="skill-tag">AutoSys</span>
             </div>
           </div>
         </div>
@@ -922,6 +1000,7 @@
               <span class="skill-tag">Entrepreneurship</span>
               <span class="skill-tag">Community Building</span>
               <span class="skill-tag">Event Planning</span>
+              <span class="skill-tag">Marketing</span>
             </div>
           </div>
         </div>
@@ -947,6 +1026,7 @@
               <span class="skill-tag">Django</span>
               <span class="skill-tag">Figma</span>
               <span class="skill-tag">Project Management</span>
+              <span class="skill-tag">Team Leadership</span>
             </div>
           </div>
         </div>
@@ -983,78 +1063,6 @@
           </button>
         </div>
         
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid" id="projectsGrid">
-        <!-- Featured Projects (Always Visible) -->
-        <div class="project-card glass">
-          <img src="photos/335685663-f01d84a8-a32f-489f-945b-c4307ad84577.png" alt="One-shot Similarity Learning" />
-          <div class="project-body">
-            <h3>One-shot Similarity Learning</h3>
-            <p class="small muted">Face recognition using Siamese Nueral Network to identify unique faces with minimal data.</p>
-            <a href="https://github.com/ssachis/One-shot-Similarity-learning" class="btn btn-primary glow" target="_blank" rel="noopener">View Project</a>
-          </div>
-        </div>
-
-        <div class="project-card glass">
-          <img src="photos/Screenshot 2025-10-23 at 3.43.28 PM.png" alt="The Hangout Delhi" />
-          <div class="project-body">
-            <h3>The Hangout Delhi</h3>
-            <p class="small muted">Cofounded a platform connecting artists and venues — bringing events to life.</p>
-            <a href="https://thehangoutdelhi.fun" class="btn btn-primary glow" target="_blank" rel="noopener">Visit Website</a>
-          </div>
-        </div>
-
-        <div class="project-card glass">
-          <img src="photos/carma.jpeg" alt="Translator" />
-          <div class="project-body">
-            <h3>Project-Karma</h3>
-            <p class="small muted">Designing of an Efficient Model for Violence Detection Using Advance Deep Learning Techniques</p>
-            <a href="https://ieeexplore.ieee.org/document/10141720?" class="btn btn-primary glow" target="_blank" rel="noopener">Research Paper</a>
-          </div>
-        </div>
-
-        <!-- Additional Projects (Hidden Initially) -->
-        <div class="project-card glass hidden">
-          <img src="photos/download (1).png" alt="Portfolio Website" />
-          <div class="project-body">
-            <h3>Translator App</h3>
-            <p class="small muted">A mobile app that listens, translates and speaks — merging tech and accessibility..</p>
-            <a href="https://github.com/ssachis/translator" class="btn btn-primary glow" target="_blank" rel="noopener">View App</a>
-          </div>
-        </div>
-
-        <div class="project-card glass hidden">
-          <img src="photos/game.png" alt="Data Visualization" />
-          <div class="project-body">
-            <h3>Lets Play</h3>
-            <p class="small muted">A flutter based game app consisting of login, registry and games (Flappy Bird, Dino Runs, Arkenoids).</p>
-            <a href="https://github.com/ssachis/lets-play" class="btn btn-primary glow" target="_blank" rel="https://github.com/ssachis/lets-play">View Project</a>
-          </div>
-        </div>
-
-        <div class="project-card glass hidden">
-          <img src="photos/music.png" alt="Machine Learning Model" />
-          <div class="project-body">
-            <h3>Music Player</h3>
-            <p class="small muted">A music player , consisting of a splash screen, a screen with a songs list, and another with a player to play the particular song.</p>
-            <a href="https://github.com/ssachis/music-player" class="btn btn-primary glow" target="_blank" rel="https://github.com/ssachis/music-player">View Project</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- View More Projects Button -->
-      <div class="projects-expand-container">
-        <button class="expand-btn" id="projectsExpandBtn">
-          View More Projects
-          <i class="fas fa-chevron-down"></i>
-        </button>
       </div>
     </div>
   </section>
@@ -1101,6 +1109,9 @@
       } else {
         navbar.classList.remove('scrolled');
       }
+      
+      // Update active nav link based on scroll position
+      updateActiveNavLink();
     });
 
     // Mobile menu toggle
@@ -1118,6 +1129,29 @@
         navMenu.classList.remove('active');
       });
     });
+
+    // Update active nav link based on scroll position
+    function updateActiveNavLink() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    }
 
     // Interactive Sparkles
     const canvas = document.getElementById('heroCanvas');
