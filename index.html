@@ -642,11 +642,10 @@
       }
       
       .about-text p { margin-bottom: 14px; }
-      .about-nyc-link { margin: 6px 0 0 !important; font-size: 1.05rem; }
-      .about-nyc-link a { color: var(--primary); text-decoration: none; font-weight: 500; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
-      .about-nyc-link a b { font-weight: 700; }
-      .about-nyc-link a:hover { border-bottom-color: currentColor; }
-      .about-art { margin: 10px 0 0 !important; }
+      .about-more { margin-top: 4px !important; }
+      .about-skills { margin-top: 20px; gap: 8px; }
+      .inline-link { color: var(--primary); text-decoration: underline; text-decoration-color: rgba(138, 43, 226, 0.3); text-decoration-thickness: 1.5px; text-underline-offset: 4px; transition: text-decoration-color .2s ease, color .2s ease; }
+      .inline-link:hover { text-decoration-color: currentColor; }
       .about-image img {
         width: 100%;
         max-width: 400px;
@@ -1100,16 +1099,11 @@
         <p>A curious soul, I love learning and exploring new technologies. My passion lies at the intersection of technology and creativity, where I can build solutions that make a difference.</p>
         
 
-        <p class="about-nyc-link">
-          <a href="https://ssachis.github.io/NYC-projects/" target="_blank" rel="noopener">→ See everything I've built since coming to <b>NYC</b></a>
+        <p class="about-more">
+          See <a class="inline-link" href="https://ssachis.github.io/NYC-projects/" target="_blank" rel="noopener">everything I've built since moving to NYC</a>,
+          or take a look at my <a class="inline-link" href="art/gallery.html" target="_blank" rel="noopener">architecture sketches</a>.
         </p>
-        <!-- Simple art mention -->
-        <p class="small muted about-art">
-          As a side note, I love sketching architecture 
-          <a href="art/gallery.html" target="_blank" style="color: var(--primary); text-decoration: none;">
-            → View my art
-          </a>
-        </p>
+        <div class="skills about-skills"><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">React</span><span class="skill-tag">AI / LLM agents</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Spring Boot</span><span class="skill-tag">WebRTC</span><span class="skill-tag">Figma</span></div>
       </div>
 
       <div class="about-image">
