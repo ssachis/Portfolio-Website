@@ -642,9 +642,11 @@
       }
       
       .about-text p { margin-bottom: 14px; }
-      .about-actions { margin-top: 22px; }
-      .about-nyc { margin-top: 0 !important; }
-      .about-art { margin: 22px 0 0 !important; }
+      .about-nyc-link { margin: 6px 0 0 !important; font-size: 1.05rem; }
+      .about-nyc-link a { color: var(--primary); text-decoration: none; font-weight: 500; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+      .about-nyc-link a b { font-weight: 700; }
+      .about-nyc-link a:hover { border-bottom-color: currentColor; }
+      .about-art { margin: 10px 0 0 !important; }
       .about-image img {
         width: 100%;
         max-width: 400px;
@@ -718,11 +720,6 @@
       .projects-actions .expand-btn { font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.2; padding: 12px 24px; }
       .projects-actions .expand-btn { border: 2px solid var(--glass-border); }
       .nyc-btn .short { display: none; }
-      .about-nyc { font-size: 1rem; line-height: 1.2; font-weight: 400; color: #555 !important;
-        background: #fff; border: 1px solid #e2e0e6; animation: none;
-        box-shadow: 0 4px 12px -6px rgba(138, 43, 226, 0.2); }
-      .about-nyc .nyc-word { color: var(--primary); font-weight: 600; }
-      .about-nyc:hover { transform: translateY(-2px); box-shadow: 0 6px 16px -4px rgba(138, 43, 226, 0.3); }
       @media (max-width: 520px) { .nyc-btn .long { display: none; } .nyc-btn .short { display: inline; } }
       .nyc-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(138, 43, 226, .18); }
       .nyc-btn i { transition: transform .2s ease; }
@@ -1103,11 +1100,9 @@
         <p>A curious soul, I love learning and exploring new technologies. My passion lies at the intersection of technology and creativity, where I can build solutions that make a difference.</p>
         
 
-        <div class="about-actions">
-          <a class="nyc-btn about-nyc" href="https://ssachis.github.io/NYC-projects/" target="_blank" rel="noopener">
-            <span class="long">View everything I have built since coming to <b class="nyc-word">NYC</b></span><span class="short">Everything I've built in <b class="nyc-word">NYC</b></span>
-          </a>
-        </div>
+        <p class="about-nyc-link">
+          <a href="https://ssachis.github.io/NYC-projects/" target="_blank" rel="noopener">→ See everything I've built since coming to <b>NYC</b></a>
+        </p>
         <!-- Simple art mention -->
         <p class="small muted about-art">
           As a side note, I love sketching architecture 
