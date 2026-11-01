@@ -645,35 +645,6 @@
       .about-actions { margin-top: 26px; }
       .about-nyc { margin-top: 0 !important; color: var(--primary) !important; }
       .about-art { margin-top: 14px; }
-      /* fanned photo stack */
-      .photo-stack {
-        position: relative;
-        width: min(100%, 360px);
-        aspect-ratio: 4 / 5;
-        margin: 0 auto;
-      }
-      .photo-stack img {
-        position: absolute; inset: 0;
-        width: 100%; height: 100%; max-width: none;
-        object-fit: cover;
-        border-radius: 18px;
-        border: 6px solid #fff;
-        box-shadow: 0 18px 40px -18px rgba(40, 20, 80, .45);
-        transform-origin: 50% 90%;
-        transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .4s ease;
-      }
-      .photo-stack img:nth-last-child(1) { z-index: 3; transform: rotate(-3deg); }
-      .photo-stack img:nth-last-child(2) { z-index: 2; transform: translateX(16%) rotate(7deg) scale(.95); }
-      .photo-stack img:nth-last-child(3) { z-index: 1; transform: translateX(28%) rotate(14deg) scale(.9); }
-      .photo-stack img:nth-last-child(n+4) { opacity: 0; }
-      .photo-stack:hover img:nth-last-child(1) { transform: rotate(-1deg) translateY(-4px); }
-      #about { overflow-x: clip; }
-      @media (max-width: 768px) {
-        .photo-stack { width: 72%; margin-left: 8%; }
-        .photo-stack img:nth-last-child(2) { transform: translateX(12%) rotate(6deg) scale(.95); }
-        .photo-stack img:nth-last-child(3) { transform: translateX(20%) rotate(11deg) scale(.9); }
-      }
-      @media (prefers-reduced-motion: reduce) { .photo-stack img { transition: none; } }
       .about-image img {
         width: 100%;
         max-width: 400px;
@@ -1146,10 +1117,7 @@
       </div>
 
       <div class="about-image">
-        <div class="photo-stack" id="photoStack">
-          <img src="WhatsApp Image 2025-10-21 at 16.09.18 (1).jpeg" alt="Sachi smiling under a colourful umbrella at a hill fort" />
-          <img src="photos/sachi-bookshop.jpg" alt="Sachi reading in a bookshop" />
-        </div>
+        <img src="WhatsApp Image 2025-10-21 at 16.09.18 (1).jpeg" alt="Sachi Singh" />
       </div>
     </div>
   </section>
