@@ -642,9 +642,9 @@
       }
       
       .about-text p { margin-bottom: 14px; }
-      .about-actions { margin-top: 26px; }
+      .about-actions { margin-top: 22px; }
       .about-nyc { margin-top: 0 !important; color: var(--primary) !important; }
-      .about-art { margin-top: 14px; }
+      .about-art { margin: 22px 0 0 !important; }
       .about-image img {
         width: 100%;
         max-width: 400px;
@@ -718,10 +718,10 @@
       .projects-actions .expand-btn { font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.2; padding: 12px 24px; }
       .projects-actions .expand-btn { border: 2px solid var(--glass-border); }
       .nyc-btn .short { display: none; }
-      .about-nyc { margin-top: 24px; font-size: 1rem; line-height: 1.2; font-weight: 400; box-shadow: none; color: #222;
-        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #4fd1c5, #8a2be2, #d65db1, #4fd1c5) border-box;
-        background-size: 100% 100%, 300% 100%; }
-      .about-nyc:hover { color: var(--primary); }
+      .about-nyc { font-size: 1rem; line-height: 1.2; font-weight: 400; color: var(--primary);
+        background: #fff; border: 1px solid rgba(138, 43, 226, 0.12); animation: none;
+        box-shadow: 0 4px 12px -4px rgba(138, 43, 226, 0.22); }
+      .about-nyc:hover { transform: translateY(-2px); box-shadow: 0 6px 16px -4px rgba(138, 43, 226, 0.3); }
       @media (max-width: 520px) { .nyc-btn .long { display: none; } .nyc-btn .short { display: inline; } }
       .nyc-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(138, 43, 226, .18); }
       .nyc-btn i { transition: transform .2s ease; }
