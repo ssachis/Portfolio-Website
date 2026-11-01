@@ -641,6 +641,44 @@
         text-align: center;
       }
       
+      .about-text p { margin-bottom: 14px; }
+      .about-actions { margin-top: 26px; }
+      .about-nyc { margin-top: 0 !important; color: var(--primary) !important; }
+      .about-art { margin-top: 14px; }
+      /* fanned photo stack */
+      .photo-stack {
+        position: relative;
+        width: min(100%, 360px);
+        aspect-ratio: 4 / 5;
+        margin: 0 auto;
+        cursor: pointer;
+        outline: none;
+      }
+      .photo-stack img {
+        position: absolute; inset: 0;
+        width: 100%; height: 100%; max-width: none;
+        object-fit: cover;
+        border-radius: 18px;
+        border: 6px solid #fff;
+        box-shadow: 0 18px 40px -18px rgba(40, 20, 80, .45);
+        transform-origin: 50% 90%;
+        transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .4s ease;
+      }
+      .photo-stack img:nth-last-child(1) { z-index: 3; transform: rotate(-3deg); }
+      .photo-stack img:nth-last-child(2) { z-index: 2; transform: translateX(16%) rotate(7deg) scale(.95); }
+      .photo-stack img:nth-last-child(3) { z-index: 1; transform: translateX(28%) rotate(14deg) scale(.9); }
+      .photo-stack img:nth-last-child(n+4) { opacity: 0; }
+      .photo-stack:hover img:nth-last-child(1) { transform: rotate(-1deg) translateY(-4px); }
+      .photo-stack:focus-visible img:nth-last-child(1) { box-shadow: 0 0 0 3px var(--primary); }
+      .photo-stack img.leaving { transform: translateX(-60%) rotate(-18deg) !important; opacity: 0; }
+      #about { overflow-x: clip; }
+      @media (max-width: 768px) {
+        .photo-stack { width: 72%; margin-left: 8%; }
+        .photo-stack img:nth-last-child(2) { transform: translateX(12%) rotate(6deg) scale(.95); }
+        .photo-stack img:nth-last-child(3) { transform: translateX(20%) rotate(11deg) scale(.9); }
+      }
+      .stack-hint { margin-top: 14px; font-size: .85rem; color: #888; text-align: center; }
+      @media (prefers-reduced-motion: reduce) { .photo-stack img { transition: none; } }
       .about-image img {
         width: 100%;
         max-width: 400px;
@@ -1097,24 +1135,14 @@
         <p>Currently pursuing MS-CEI at NYU.</p>
         <p>A curious soul, I love learning and exploring new technologies. My passion lies at the intersection of technology and creativity, where I can build solutions that make a difference.</p>
         
-        <div class="skills">
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Spring Boot</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">AI/ML</span>
-          <span class="skill-tag">Django</span>
-          <span class="skill-tag">REST API</span>
-          <span class="skill-tag">Oracle</span>
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Git</span>
-        </div>
 
-        <a class="nyc-btn about-nyc" href="https://ssachis.github.io/NYC-projects/" target="_blank" rel="noopener">
-          <span class="long">View everything I have built since coming to NYC</span><span class="short">Everything I've built in NYC</span>
-        </a>
+        <div class="about-actions">
+          <a class="nyc-btn about-nyc" href="https://ssachis.github.io/NYC-projects/" target="_blank" rel="noopener">
+            <span class="long">View everything I have built since coming to NYC</span><span class="short">Everything I've built in NYC</span>
+          </a>
+        </div>
         <!-- Simple art mention -->
-        <p class="small muted" style="margin-top: 18px;">
+        <p class="small muted about-art">
           As a side note, I love sketching architecture 
           <a href="art/gallery.html" target="_blank" style="color: var(--primary); text-decoration: none;">
             → View my art
@@ -1123,7 +1151,11 @@
       </div>
 
       <div class="about-image">
-        <img src="WhatsApp Image 2025-10-21 at 16.09.18 (1).jpeg" alt="Sachi Singh" />
+        <div class="photo-stack" id="photoStack" role="button" tabindex="0" aria-label="Photos of Sachi. Click to see the next one.">
+          <img src="WhatsApp Image 2025-10-21 at 16.09.18 (1).jpeg" alt="Sachi smiling under a colourful umbrella at a hill fort" />
+          <img src="photos/sachi-bookshop.jpg" alt="Sachi reading in a bookshop" />
+        </div>
+        <p class="stack-hint">Tap to shuffle</p>
       </div>
     </div>
   </section>
@@ -1480,6 +1512,22 @@
       });
 
     }); // End DOMContentLoaded
-  </script>
+  
+    // About photo stack: click (or Enter) sends the top photo to the back
+    (function () {
+      const stack = document.getElementById('photoStack');
+      if (!stack) return;
+      let busy = false;
+      function next() {
+        if (busy || stack.children.length < 2) return;
+        busy = true;
+        const top = stack.lastElementChild;
+        top.classList.add('leaving');
+        setTimeout(() => { top.classList.remove('leaving'); stack.prepend(top); busy = false; }, 450);
+      }
+      stack.addEventListener('click', next);
+      stack.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); next(); } });
+    })();
+</script>
 </body>
 </html>
