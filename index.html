@@ -714,7 +714,10 @@
       .projects-actions .expand-btn { font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.2; padding: 12px 24px; }
       .projects-actions .expand-btn { border: 2px solid var(--glass-border); }
       .nyc-btn .short { display: none; }
-      .about-nyc { margin-top: 18px; font-size: 1rem; line-height: 1.2; font-weight: 400; box-shadow: none; }
+      .about-nyc { margin-top: 24px; font-size: 1rem; line-height: 1.2; font-weight: 400; box-shadow: none; color: #222;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #4fd1c5, #8a2be2, #d65db1, #4fd1c5) border-box;
+        background-size: 100% 100%, 300% 100%; }
+      .about-nyc:hover { color: var(--primary); }
       @media (max-width: 520px) { .nyc-btn .long { display: none; } .nyc-btn .short { display: inline; } }
       .nyc-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(138, 43, 226, .18); }
       .nyc-btn i { transition: transform .2s ease; }
@@ -1107,16 +1110,16 @@
           <span class="skill-tag">Git</span>
         </div>
 
+        <a class="nyc-btn about-nyc" href="https://ssachis.github.io/NYC-projects/" target="_blank" rel="noopener">
+          <span class="long">View everything I have built since coming to NYC</span><span class="short">Everything I've built in NYC</span>
+        </a>
         <!-- Simple art mention -->
-        <p class="small muted" style="margin-top: 25px;">
+        <p class="small muted" style="margin-top: 18px;">
           As a side note, I love sketching architecture 
           <a href="art/gallery.html" target="_blank" style="color: var(--primary); text-decoration: none;">
             → View my art
           </a>
         </p>
-        <a class="nyc-btn about-nyc" href="https://ssachis.github.io/NYC-projects/" target="_blank" rel="noopener">
-          <span class="long">View everything I have built since coming to NYC</span><span class="short">Everything I've built in NYC</span> <i class="fas fa-arrow-right"></i>
-        </a>
       </div>
 
       <div class="about-image">
