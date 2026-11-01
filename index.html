@@ -651,8 +651,6 @@
         width: min(100%, 360px);
         aspect-ratio: 4 / 5;
         margin: 0 auto;
-        cursor: pointer;
-        outline: none;
       }
       .photo-stack img {
         position: absolute; inset: 0;
@@ -669,15 +667,12 @@
       .photo-stack img:nth-last-child(3) { z-index: 1; transform: translateX(28%) rotate(14deg) scale(.9); }
       .photo-stack img:nth-last-child(n+4) { opacity: 0; }
       .photo-stack:hover img:nth-last-child(1) { transform: rotate(-1deg) translateY(-4px); }
-      .photo-stack:focus-visible img:nth-last-child(1) { box-shadow: 0 0 0 3px var(--primary); }
-      .photo-stack img.leaving { transform: translateX(-60%) rotate(-18deg) !important; opacity: 0; }
       #about { overflow-x: clip; }
       @media (max-width: 768px) {
         .photo-stack { width: 72%; margin-left: 8%; }
         .photo-stack img:nth-last-child(2) { transform: translateX(12%) rotate(6deg) scale(.95); }
         .photo-stack img:nth-last-child(3) { transform: translateX(20%) rotate(11deg) scale(.9); }
       }
-      .stack-hint { margin-top: 14px; font-size: .85rem; color: #888; text-align: center; }
       @media (prefers-reduced-motion: reduce) { .photo-stack img { transition: none; } }
       .about-image img {
         width: 100%;
@@ -1151,11 +1146,10 @@
       </div>
 
       <div class="about-image">
-        <div class="photo-stack" id="photoStack" role="button" tabindex="0" aria-label="Photos of Sachi. Click to see the next one.">
+        <div class="photo-stack" id="photoStack">
           <img src="WhatsApp Image 2025-10-21 at 16.09.18 (1).jpeg" alt="Sachi smiling under a colourful umbrella at a hill fort" />
           <img src="photos/sachi-bookshop.jpg" alt="Sachi reading in a bookshop" />
         </div>
-        <p class="stack-hint">Tap to shuffle</p>
       </div>
     </div>
   </section>
@@ -1513,21 +1507,6 @@
 
     }); // End DOMContentLoaded
   
-    // About photo stack: click (or Enter) sends the top photo to the back
-    (function () {
-      const stack = document.getElementById('photoStack');
-      if (!stack) return;
-      let busy = false;
-      function next() {
-        if (busy || stack.children.length < 2) return;
-        busy = true;
-        const top = stack.lastElementChild;
-        top.classList.add('leaving');
-        setTimeout(() => { top.classList.remove('leaving'); stack.prepend(top); busy = false; }, 450);
-      }
-      stack.addEventListener('click', next);
-      stack.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); next(); } });
-    })();
 </script>
 </body>
 </html>
