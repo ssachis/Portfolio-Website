@@ -700,9 +700,9 @@
         padding: 12px 24px;
         border-radius: 50px;
         color: var(--primary);
-        font-weight: 600;
+        font-weight: 400;
         text-decoration: none;
-        border: 2px solid transparent;
+        border: 1.5px solid transparent;
         background:
           linear-gradient(#fff, #fff) padding-box,
           linear-gradient(90deg, #8a2be2, #ff6b9d, #ff8a5c, #ffc94d, #4fd1c5, #8a2be2) border-box;
@@ -711,10 +711,10 @@
         transition: transform .3s ease, box-shadow .3s ease;
         animation: rainbowEdge 6s linear infinite;
       }
-      .projects-actions .expand-btn, .nyc-btn { font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.2; padding: 12px 24px; }
+      .projects-actions .expand-btn { font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.2; padding: 12px 24px; }
       .projects-actions .expand-btn { border: 2px solid var(--glass-border); }
       .nyc-btn .short { display: none; }
-      .about-nyc { margin-top: 18px; font-size: 1rem; line-height: 1.2; }
+      .about-nyc { margin-top: 18px; font-size: 1rem; line-height: 1.2; font-weight: 400; box-shadow: none; }
       @media (max-width: 520px) { .nyc-btn .long { display: none; } .nyc-btn .short { display: inline; } }
       .nyc-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(138, 43, 226, .18); }
       .nyc-btn i { transition: transform .2s ease; }
@@ -1081,9 +1081,6 @@
           View More Projects
           <i class="fas fa-chevron-down"></i>
         </button>
-        <a class="nyc-btn" href="https://ssachis.github.io/NYC-projects/" target="_blank" rel="noopener">
-          <span class="long">View everything I have built since coming to NYC</span><span class="short">Everything I've built in NYC</span> <i class="fas fa-arrow-right"></i>
-        </a>
       </div>
     </div>
   </section>
